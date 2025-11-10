@@ -1,0 +1,305 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Oxygen", sans-serif;
+  font-size: 16px;
+}
+body {
+  background-color: #2a303c;
+  /* padding-left: 24px;
+    padding-right: 24px; */
+}
+/* nav start here  */
+#navbar .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(218, 211, 211, 0.2);
+  padding-left: 24px;
+  padding-right: 24px;
+  margin-top: 15px;
+  padding-bottom: 15px;
+  background-color: #0f1011;
+}
+
+.navlogo .logo a {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 24px;
+  color: #2f8ff0;
+  font-family: "Poppins", sans-serif;
+  padding-left: 24px;
+}
+.navlist ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+  padding-right: 24px;
+}
+
+.navlist ul li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-family: sans-serif;
+  color: #f8fafc;
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+.navlist li a:hover {
+  color: #2f8ff0;
+}
+/* underline animation */
+.navlist li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: #2f8ff0; /* underline color */
+  transition: width 0.3s ease;
+}
+.navlist li a:hover::after {
+  width: 100%; /* underline expands fully */
+}
+.nav-button {
+  padding: 10px;
+  background: linear-gradient(90deg, #2f8ff0, #297eda);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+/* nav ends  */
+/* Hero section  */
+#hero .hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+  padding: 80px 24px;
+  background-color: #0f1011;
+}
+.heroimg {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  border-radius: 15px;
+  overflow: hidden; /* keeps overlay inside rounded corners */
+  background-image: url("./image/hero-developer-C768jIgY.jpg");
+  background-size: cover; /* fills container */
+  background-position: center; /* centers the image */
+  background-repeat: no-repeat;
+}
+.heroimg {
+  /* glowing border */
+
+  /* background-clip: padding-box; keeps overlay inside */
+  box-shadow: 0 0 20px rgba(157, 110, 243, 0.6);
+  animation: glow 2s linear infinite alternate;
+}
+
+/* overlay */
+.heroimg .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(81, 67, 138, 0.6); /* semi-transparent overlay */
+}
+/* Hero text stling  */
+#journey .journey {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+h1 {
+  color: #f8fafc;
+  font-size: 60px;
+}
+span {
+  color: #2f8ff0;
+}
+p {
+  font-size: 20px;
+  color: #94a3b8;
+  margin: 24px 0px;
+  line-height: 1.75rem;
+  display: block;
+  max-width: 90%;
+}
+.hero-button {
+  display: flex;
+  gap: 15px;
+}
+.colored-button {
+  padding: 15px 32px;
+  background: linear-gradient(90deg, #2f8ff0, #297eda);
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+button {
+  padding: 15px 32px;
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(218, 211, 211, 0.2);
+  border-radius: 10px;
+}
+/* hero ends  */
+/* journey section  */
+#journey .journey {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 24px;
+  border-bottom: 1px solid rgba(218, 211, 211, 0.2);
+}
+h2 {
+  color: #f8fafc;
+  font-size: 40px;
+}
+.journey-paragraph {
+  display: block;
+  max-width: 60%;
+  text-align: center;
+}
+.journey-boxs {
+  display: flex;
+  flex-direction: row;
+  padding: 80px 0px;
+  gap: 20px;
+}
+.journey-boxs .box {
+  border: 1px solid rgba(218, 211, 211, 0.2);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  padding: 20px 0px 0px 20px;
+}
+.journey-boxs .box ul {
+  /* margin: 0; */
+  /* padding: 0; */
+  list-style-position: inside; /* keeps bullets aligned with text */
+}
+h3 {
+  color: white;
+  font-size: 20px;
+}
+.box-paragraph {
+  font-size: 14px;
+  padding: 6px 0px 0px;
+}
+.list-paragraph ul {
+  display: flex;
+  flex-direction: column;
+}
+ul li {
+  font-size: 14px;
+  color: rgb(216, 212, 212);
+}
+ul li::marker {
+  color: #2f8ff0;
+  /* font-weight: bold; */
+  font-size: 1.2rem;
+}
+.box .box-icons {
+  max-width: 50px;
+  background: radial-gradient(
+    circle at center,
+    rgba(47, 143, 240, 0.25),
+    rgba(47, 143, 240, 0.05)
+  );
+
+  color: transparent;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 20px;
+}
+/* removing default gaps  */
+h3,
+.box-paragraph,
+.list-paragraph {
+  margin: 5px;
+  /* padding: 0; */
+}
+.explore-icon {
+  max-width: 15px;
+}
+.explore-button {
+  color: black;
+  background-color: #2f8ff0;
+  font-weight: bold;
+}
+.box {
+  /* box-shadow: 0 0 0 rgba(0, 0, 0, 0); no shadow initially */
+  transition: all 0.4s ease; /* smooth effect */
+}
+.box:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2), 0 0 20px rgba(47, 143, 240, 0.5); /* soft blue glow */
+  transform: translateY(-5px); /* slight lift effect */
+}
+/* footer start here  */
+#footer .footer {
+  display: flex;
+  /* align-items: center; */
+  justify-content: left;
+  gap: 15rem;
+  padding: 40px 24px;
+}
+.footer-logo .logo {
+  font-weight: 700;
+  font-size: 20px;
+  color: #2f8ff0;
+  font-family: "Poppins", sans-serif;
+}
+.footer-logo {
+  display: flex;
+}
+.footer-logo p {
+  font-size: 14px;
+}
+h5 {
+  font-size: 16px;
+  color: rgb(235, 229, 229);
+
+}
+.footer h5{
+  margin: 15px 0px;
+}
+.footer-ul {
+  list-style-type: none;
+  
+}
+.footer-logo ul li a {
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 25px;
+  color: #94a3b8;;
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.footer li a:hover {
+  color: #2f8ff0;
+}
+
+.footer-icons{
+   max-width: 30px;
+  
+}
