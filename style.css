@@ -26,6 +26,12 @@ body {
   margin-top: 15px;
   padding-bottom: 15px;
   background-color: #0f1011;
+
+}
+#navbar{
+    position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
 .navlogo .logo a {
@@ -276,20 +282,18 @@ h3,
 h5 {
   font-size: 16px;
   color: rgb(235, 229, 229);
-
 }
-.footer h5{
+.footer h5 {
   margin: 15px 0px;
 }
 .footer-ul {
   list-style-type: none;
-  
 }
 .footer-logo ul li a {
   text-decoration: none;
   font-size: 14px;
   line-height: 25px;
-  color: #94a3b8;;
+  color: #94a3b8;
   position: relative;
   display: inline-block;
   transition: color 0.3s ease;
@@ -299,7 +303,230 @@ h5 {
   color: #2f8ff0;
 }
 
-.footer-icons{
-   max-width: 30px;
-  
+.footer-icons {
+  max-width: 30px;
+  transition: 0.3s ease;
+}
+.footer-icons:hover {
+  filter: hue-rotate(200deg) saturate(10);
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* ============================
+   📱 RESPONSIVE DESIGN START
+   ============================ */
+
+/* Smartphones (Portrait) — 320px to 479px */
+@media (min-width: 320px) and (max-width: 479px) {
+  /* Navbar */
+  .navlist ul {
+    width: 100%;
+    right: 0;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 16px;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero {
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 16px;
+    text-align: center;
+  }
+
+  .hero-button {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .journey-boxs {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .journey-paragraph {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  #footer .footer {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .footer-logo {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-icon {
+    text-align: center;
+  }
+}
+
+/* Low Resolution Tablets & Mobiles (Landscape) — 481px to 767px */
+@media (min-width: 481px) and (max-width: 767px) {
+  .hero {
+    flex-direction: column;
+    gap: 50px;
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  .journey-boxs {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .journey-paragraph {
+    max-width: 90%;
+  }
+
+  #footer .footer {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+/* Tablets, iPads (Portrait + Landscape) — 768px to 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    gap: 60px;
+    padding: 60px 24px;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 42px;
+  }
+
+  .journey-boxs {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+  }
+
+  .journey-boxs .box {
+    width: 45%;
+  }
+
+  .journey-paragraph {
+    max-width: 80%;
+  }
+
+  #footer .footer {
+    gap: 5rem;
+  }
+}
+
+/* Laptops, Desktops — 1025px to 1280px */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .hero {
+    gap: 60px;
+    padding: 80px 24px;
+  }
+
+  .journey-boxs {
+    gap: 20px;
+  }
+
+  .journey-boxs .box {
+    width: 22%;
+  }
+
+  p {
+    font-size: 18px;
+  }
+}
+
+/* Desktops — 1281px and higher */
+@media (min-width: 1281px) {
+  .hero {
+    padding: 100px 48px;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+
+  .journey-boxs .box {
+    width: 22%;
+  }
+
+  #footer .footer {
+    gap: 10rem;
+  }
+}
+/* ============================
+   📱 RESPONSIVE DESIGN END
+   ============================ */
+
+/* --- HAMBURGER MENU --- */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  padding-right: 24px;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Toggle animation when active */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsive navbar behavior */
+@media (max-width: 768px) {
+  .navlist ul {
+    flex-direction: column;
+    background-color: #0f1011;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 220px;
+    text-align: right;
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+  }
+
+  .navlist ul.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
 }

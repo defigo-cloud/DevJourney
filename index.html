@@ -14,14 +14,20 @@
     </div>
     <div class="navlist">
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Journey</a></li>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#journey">Journey</a></li>
             <li><a href="#">Project</a></li>
-            <li><a href="#">Contacts</a></li>
+            <li><a href="#footer">Contacts</a></li>
             <button class="nav-button">Get In Touch</button>
         </ul>
     </div>
-    
+     <!-- HAMBURGER ICON -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
 </div>
     </section>
     <section id="hero">
@@ -129,5 +135,15 @@
 </div>
 </div>
     </section>
+    <script>
+  const hamburger = document.getElementById('hamburger');
+  const navList = document.querySelector('.navlist ul');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navList.classList.toggle('active');
+  });
+</script>
+
 </body>
 </html>
